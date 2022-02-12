@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="WebsiteMapper">
+    <insert id="addWebsite" parameterType="net.biancheng.po.Website">
+        insert into website (name ,url,age,country)
+        values(#{name},#{url},#{age},#{country})
+    </insert>
+    <select id="selectWebsite" resultType="net.biancheng.po.Website">
+        select * from website
+    </select>
+</mapper>
