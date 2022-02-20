@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/mall
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#POJO属性名 与 JDBC字段名下划线无法对应问题
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    #locations配置要严格注意空格
+  mapper-locations: classpath:mappers/*.xml
